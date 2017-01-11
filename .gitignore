@@ -1,0 +1,8 @@
+**/target
+<<<<<<< HEAD
+**/.classpath
+module1/.classpath
+=======
+*.class
+>>>>>>> b1
+.settings

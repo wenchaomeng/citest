@@ -1,0 +1,5 @@
+<factorypath>
+    <factorypathentry kind="PLUGIN" id="org.eclipse.jst.ws.annotations.core" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="EXTJAR" id="/Users/mengwenchao/Documents/db/citest/module1/target/module1-0.0.1-SNAPSHOT.jar" enabled="false" runInBatchMode="false"/>
+    <factorypathentry kind="EXTJAR" id="/Users/mengwenchao/Documents/db/citest/module1/target/dependency/log4j-core-2.4.1.jar" enabled="false" runInBatchMode="false"/>
+</factorypath>

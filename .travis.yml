@@ -1,0 +1,23 @@
+language: java
+jdk:
+  - oraclejdk8
+cache:
+  directories:
+    - $HOME/.m2
+notification:
+  email:
+    recipients:
+      -  wcmeng@ctrip.com
+    on_success: always
+    on_failure: always
+
+before_script:
+  
+before_install:
+
+after_success:
+
+branches:
+  only:
+    - master
+    - b1

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+	<Properties>
+		<Property name="baseDir">/opt/logs/100004376</Property>
+		<Property name="appName">test</Property>
+		
+	</Properties>
+	<Appenders>
+		<Async name="ASYNC">
+			<AppenderRef ref="rollingFileInfo" />
+		</Async>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %-5p [%t] %c{1.} - %m%n" />
+		</Console>
+
+        <RollingFile name="rollingFileInfo" fileName="${baseDir}/${appName}.log"
+                     filePattern="${baseDir}/${appName}-%d{yyyy-MM-dd_hh-mm-ss}-%i.log.gz">
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}][%p][%t][%c{1}]%m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+			<DefaultRolloverStrategy max="10">
+				<Delete basePath="${baseDir}" maxDepth="2">
+					<IfFileName glob="{*/${appName}*.log.gz,${appName}*.log.gz}" />
+					<IfLastModified age="10s" />
+				</Delete>
+			</DefaultRolloverStrategy>
+        </RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<Root level="info">
+			<Appender-ref ref="ASYNC" />
+		</Root>
+	</Loggers>
+
+</Configuration>  
