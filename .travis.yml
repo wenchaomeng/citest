@@ -7,8 +7,8 @@ cache:
 notification:
   email:
     recipients:
-      -  wcmeng@ctrip.com
-      -  oytmfc@163.com
+      - wcmeng@ctrip.com
+      - oytmfc@163.com
     on_success: always
     on_failure: always
 
