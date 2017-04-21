@@ -1,4 +1,4 @@
-package test.spring.boot.components;
+package test.spring.boot.config;
 
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;

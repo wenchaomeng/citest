@@ -6,3 +6,4 @@ module1/.classpath
 *.class
 >>>>>>> b1
 .settings
+.idea
