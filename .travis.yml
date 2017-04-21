@@ -1,9 +1,3 @@
-language: java
-jdk:
-  - oraclejdk8
-cache:
-  directories:
-    - $HOME/.m2
 notification:
   email:
     recipients:
@@ -11,6 +5,12 @@ notification:
       - oytmfc@163.com
     on_success: always
     on_failure: always
+language: java
+jdk:
+  - oraclejdk8
+cache:
+  directories:
+    - $HOME/.m2
 
 before_script:
   
