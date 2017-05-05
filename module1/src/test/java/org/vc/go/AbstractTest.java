@@ -66,20 +66,6 @@ public class AbstractTest {
 		return getTestFileDir() + "/" + currentTestName();
 	}
 
-
-	protected String getTestFileDir() {
-
-		String userHome = getUserHome();
-		String result = userHome + "/tmp/citest";
-		return result + "/" + getClass().getSimpleName() + "-" + currentTestName();
-	}
-
-	public static String getUserHome() {
-
-		return System.getProperty("user.home");
-	}
-
-
 	protected void setProperties() {
 		
 	}
@@ -114,7 +100,13 @@ public class AbstractTest {
 		if(testDir != null){
 			result = testDir.replace("~", userHome);
 		}
-		return result + "/" + currentTestName();
+		String dir = result + "/" + currentTestName();
+
+		File fileDir = new File(dir);
+		if(!fileDir.exists()){
+			fileDir.mkdirs();
+		}
+		return dir;
 	}
 	
 	public static String getUserHome(){
