@@ -62,6 +62,24 @@ public class AbstractTest {
 		return name.getMethodName();
 	}
 
+	protected String getTestFile(){
+		return getTestFileDir() + "/" + currentTestName();
+	}
+
+
+	protected String getTestFileDir() {
+
+		String userHome = getUserHome();
+		String result = userHome + "/tmp/citest";
+		return result + "/" + getClass().getSimpleName() + "-" + currentTestName();
+	}
+
+	public static String getUserHome() {
+
+		return System.getProperty("user.home");
+	}
+
+
 	protected void setProperties() {
 		
 	}

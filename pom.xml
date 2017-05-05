@@ -86,4 +86,17 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+		<repository>
+			<id>unidal</id>
+			<url>https://raw.github.com/wenchaomeng/citest/mvn_repo/</url>
+			<releases>
+				<checksumPolicy>ignore</checksumPolicy>
+			</releases>
+		</repository>
+	</repositories>
 </project>

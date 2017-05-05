@@ -27,7 +27,7 @@ public class FileSizeTest extends AbstractTest{
 	@Before
 	public void beforeFileSizeTest() throws FileNotFoundException{
 		
-		file = getTestName();
+		file = getTestFile();
 		 randomAccessFile = new RandomAccessFile(file, "rw");
 	}
 
