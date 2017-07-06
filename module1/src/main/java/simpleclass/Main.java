@@ -13,7 +13,10 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+		print();
+	}
+
+	public static void print(){
 		System.out.println("hello world");
 		System.out.println(Main.class.getClassLoader().getResource("log4j2.xml"));
 		System.out.println(Main.class.getClassLoader().getResource("f.out"));

@@ -13,6 +13,10 @@ cache:
     - $HOME/.m2
 
 before_script:
+
+
+script:
+    mvn install -DskipTests
   
 before_install:
 

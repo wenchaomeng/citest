@@ -26,7 +26,8 @@ public class Application {
 	public static void main(String[] args) throws Exception {
 
 		URL url = Application.class.getClassLoader().getResource(".");
-		
+		System.out.println(url);
+
 		SpringApplication application = new SpringApplication(Application.class);
 		application.setRegisterShutdownHook(false);
 		final ConfigurableApplicationContext applicationContext = application.run(args);
