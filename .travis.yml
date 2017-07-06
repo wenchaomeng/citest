@@ -16,7 +16,7 @@ before_script:
 
 
 script:
-   /usr/bin/true
+   echo "skip test...."
   
 before_install:
 
